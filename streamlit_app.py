@@ -7,8 +7,7 @@ st.title("AI Equity Research Dashboard")
 
 @st.cache_data
 def load_data():
-    return pd.read_parquet("factors.parquet")
-
+    return pd.read_csv("factors.csv")
 df = load_data()
 
 latest_date = df["date"].max()
